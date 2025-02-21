@@ -1,0 +1,10 @@
+.activated-configs
+audit-logger
+libs
+log4j
+logs
+pdfs
+profiles
+scripting
+server.p12
+workingcopies
