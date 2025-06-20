@@ -1,6 +1,6 @@
 # Identity Proofing with Airlock IAM
 
-This repository accompanies the blog post [Identity Proofing with Airlock IAM](https://www.airlock.com/en/insights/airlock-blog/business-blog/identity-proofing-config-as-snippet). It provides a ready-to-import Airlock IAM Config Snippet.
+This repository provides a ready-to-import Airlock IAM Config Snippet.
 
 
 ## Requirements
@@ -15,7 +15,7 @@ This repository accompanies the blog post [Identity Proofing with Airlock IAM](h
 
 Clone this Git repository:
 ```console
-git clone https://github.com/airlock/identity-proofing-with-airlock-iam
+git clone https://github.com/airlock/airlock-iam-examples
 ```
 
 Next, open the IAM Config Editor and drag-and-drop the snippet to the left-hand plugin-tree. For detailed instructions about the import process and the necessary steps to add the ne identity proofing functionality to your existing project, see the [blog post](https://www.airlock.com/en/insights/airlock-blog/business-blog/identity-proofing-config-as-snippet).

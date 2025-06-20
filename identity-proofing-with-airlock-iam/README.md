@@ -1,6 +1,8 @@
 # Identity Proofing with Airlock IAM
 
-There are two options to get to a working Airlock IAM configuration supporting identity proofing:
+This repository accompanies the blog post [Identity Proofing with Airlock IAM](https://www.airlock.com/en/insights/airlock-blog/business-blog/identity-proofing-with-airlock-iam). It provides an almost-ready-to-use configuration for Airlock IAM.
+
+There are two options to get to a working Airlock IAM configuration:
 
 - [Full Config](full-config) - The "just add water" (sorry, database) method.
 - [Config Snippet](snippet) - Easily enrich existing project without manually re-doing big parts of the configuration.

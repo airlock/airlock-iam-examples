@@ -17,7 +17,7 @@ This repository accompanies the blog post [Identity Proofing with Airlock IAM](h
 
 Clone this Git repository:
 ```console
-git clone https://github.com/airlock/identity-proofing-with-airlock-iam
+git clone https://github.com/airlock/airlock-iam-examples
 ```
 
 Next, create a new instance and copy the necessary files:
