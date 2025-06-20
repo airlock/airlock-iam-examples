@@ -2,8 +2,8 @@
 
 There are two options to get to a working Airlock IAM configuration supporting identity proofing:
 
-- [Full Config](/full-config) - The "just add water" (sorry, database) method.
-- [Config Snippet](/snippet) - Easily enrich existing project without manually re-doing big parts of the configuration.
+- [Full Config](full-config) - The "just add water" (sorry, database) method.
+- [Config Snippet](snippet) - Easily enrich existing project without manually re-doing big parts of the configuration.
 
 
 ## Additional steps required for both methods
