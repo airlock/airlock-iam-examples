@@ -1,0 +1,363 @@
+schemaVersion: iam.airlock.com/v1
+type: IamSnippet
+metadata:
+  iamVersion: '8.4'
+spec:
+  - type: com.airlock.iam.flow.ui.application.configuration.UserSelfRegFlowLinkConfig
+    id: db22f86b-f9ba-43cb-99dd-30bb24ccbf5c
+    displayName: Self-Reg with PXLident
+    properties:
+      flowId:
+        type: com.airlock.iam.flow.application.configuration.flow.FlowIdConfig
+        id: 6130ec86-3895-48a0-9771-9d036a987fef
+        displayName: Flow ID "self-reg-pxl-ident"
+        properties:
+          flowId: self-reg-pxl-ident
+  - type: com.airlock.iam.userselfreg.application.configuration.flow.UserSelfRegFlowConfig
+    id: b5221d9e-eee1-4ff1-9696-3aa37860dfc0
+    displayName: User Self-Reg with PXL Ident
+    properties:
+      flowId:
+        ref: 6130ec86-3895-48a0-9771-9d036a987fef
+      steps:
+        - pluginList:
+            - type: com.airlock.iam.flow.shared.application.configuration.termsofservice.TermsOfServiceStepConfig
+              displayName: PXLIdent Terms of Services Step
+              properties:
+                termsOfServices:
+                  - pluginList:
+                      - type: com.airlock.iam.common.application.configuration.termsofservice.TermsOfServiceConfig
+                        displayName: PXLIdent Terms of Service
+                        properties:
+                          disclaimerTexts:
+                            - pluginList:
+                                - type: com.airlock.iam.common.application.configuration.termsofservice.DisclaimerTextConfig
+                                  displayName: PXLIdent ToC german
+                                  properties:
+                                    language: de
+                                    text: "<h1>Lorem</h2>\n\n      <p><b>Lorem</b> <i>ipsum</i> <u>dolor</u> <a href=\"https://example.com\" target=\"_blank\">sit</a> amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>\n\n      <ul>\n      <li>lorem</li>\n      <li>ipsum</li>\n      <li>dolor</li>\n      </ul>\n\n      <ol>\n      <li>lorem</li>\n      <li>ipsum</li>\n      <li>dolor</li>\n      </ol>\n\n      <p><b>Lorem</b> <i>ipsum</i> <u>dolor</u> <a href=\"https://example.com\" target=\"_blank\">sit</a> amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>"
+                                - type: com.airlock.iam.common.application.configuration.termsofservice.DisclaimerTextConfig
+                                  displayName: PXLident ToC english
+                                  properties:
+                                    language: en
+                                    text: "<h1>Lorem</h2>\n\n      <p><b>Lorem</b> <i>ipsum</i> <u>dolor</u> <a href=\"https://example.com\" target=\"_blank\">sit</a> amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>\n\n      <ul>\n      <li>lorem</li>\n      <li>ipsum</li>\n      <li>dolor</li>\n      </ul>\n\n      <ol>\n      <li>lorem</li>\n      <li>ipsum</li>\n      <li>dolor</li>\n      </ol>\n\n      <p><b>Lorem</b> <i>ipsum</i> <u>dolor</u> <a href=\"https://example.com\" target=\"_blank\">sit</a> amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>"
+                                - type: com.airlock.iam.common.application.configuration.termsofservice.DisclaimerTextConfig
+                                  displayName: PXLident ToC french
+                                  properties:
+                                    language: fr
+                                    text: "<h1>Lorem</h2>\n\n      <p><b>Lorem</b> <i>ipsum</i> <u>dolor</u> <a href=\"https://example.com\" target=\"_blank\">sit</a> amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>\n\n      <ul>\n      <li>lorem</li>\n      <li>ipsum</li>\n      <li>dolor</li>\n      </ul>\n\n      <ol>\n      <li>lorem</li>\n      <li>ipsum</li>\n      <li>dolor</li>\n      </ol>\n\n      <p><b>Lorem</b> <i>ipsum</i> <u>dolor</u> <a href=\"https://example.com\" target=\"_blank\">sit</a> amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>"
+                                - type: com.airlock.iam.common.application.configuration.termsofservice.DisclaimerTextConfig
+                                  displayName: PXLident ToC italian
+                                  properties:
+                                    language: it
+                                    text: "<h1>Lorem</h2>\n\n      <p><b>Lorem</b> <i>ipsum</i> <u>dolor</u> <a href=\"https://example.com\" target=\"_blank\">sit</a> amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>\n\n      <ul>\n      <li>lorem</li>\n      <li>ipsum</li>\n      <li>dolor</li>\n      </ul>\n\n      <ol>\n      <li>lorem</li>\n      <li>ipsum</li>\n      <li>dolor</li>\n      </ol>\n\n      <p><b>Lorem</b> <i>ipsum</i> <u>dolor</u> <a href=\"https://example.com\" target=\"_blank\">sit</a> amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>"
+                          storageStrategy: null
+                          tag: tos-v4
+                          timestampFormat: yyyyMMdd
+                          userPropertyName: disclaimer_tag
+            - type: com.airlock.iam.userselfreg.application.configuration.step.UserDataRegistrationStepConfig
+              displayName: PXLident register email address
+              properties:
+                stepId:
+                  type: com.airlock.iam.flow.api.application.configuration.step.StepIdConfig
+                  displayName: Step ID PXLident email
+                  properties:
+                    id: pxl-email
+                userDataItems:
+                  - pluginList:
+                      - type: com.airlock.iam.userselfreg.application.configuration.definition.AliasDefinitionConfig
+                        id: 5838ce11-99b3-496a-afea-8f7cec0e5cfa
+                        displayName: PXLident email alias data item
+                        comment: Connect to email
+                        properties:
+                          contextDataName: null
+                          validators:
+                            - pluginList:
+                                - type: com.airlock.iam.common.application.configuration.validation.EmailAddressValidatorConfig
+                                  displayName: PXLident email address validator
+            - type: com.airlock.iam.userselfreg.application.configuration.step.UsernameGenerationStepConfig
+              displayName: Create UUID
+            - type: com.airlock.iam.userselfreg.application.configuration.step.EmailRegistrationVerificationStepConfig
+              displayName: PXLident email verification step
+              properties:
+                emailItemDefinition:
+                  ref: 5838ce11-99b3-496a-afea-8f7cec0e5cfa
+                emailMessageProvider:
+                  type: com.airlock.iam.flow.shared.application.configuration.message.GenericEmailMessageProviderConfig
+                  displayName: PXLident self-reg email message
+                  properties:
+                    bodyResourceKey: user-self-reg.email.verification.body-with-otp
+                    subjectResourceKey: user-self-reg.email.verification.subject
+                    valueProviders:
+                      - pluginList:
+                          - type: com.airlock.iam.flow.shared.application.configuration.valueprovider.ContextDataValueMapProviderConfig
+                            id: df71573d-40b4-45e8-8407-53709a1c022f
+                            displayName: PXLident context data map
+                emailService:
+                  type: com.airlock.iam.core.misc.impl.email.DummyEmailService
+                  displayName: PXLident email service
+                otpGenerator:
+                  type: com.airlock.iam.core.misc.impl.authen.ExtendedStringGenerator
+                  displayName: PXLident static otp generator (1234)
+                  properties:
+                    pattern: '1234'
+                tagsOnSuccess:
+                  - pluginList:
+                      - type: com.airlock.iam.flow.application.configuration.tag.TagConfigImpl
+                        id: a6930c6e-a3e2-4131-8da2-57ca7e7b1acf
+                        displayName: PXLident email verified tag
+                        properties:
+                          name: EMAIL_VERIFIED
+                          timeout:
+                            - plugin: null
+            - type: com.airlock.iam.flow.shared.application.configuration.step.ScriptableStepConfig
+              displayName: 'Scriptable: PXLident Authentication'
+              properties:
+                inputSecrets:
+                  - pluginList:
+                      - type: com.airlock.iam.flow.shared.application.configuration.script.ScriptSecretConfig
+                        displayName: Script secret API key
+                        properties:
+                          identifier: API_KEY
+                          secret:
+                            - value:
+                                storageId: pxl-ident api key
+                namespace:
+                  type: com.airlock.iam.flow.shared.application.configuration.script.ScriptNamespaceConfig
+                  id: ab35d662-c64d-4034-b46a-ef7060cafd5f
+                  displayName: Script Namespace pxl-auth
+                  properties:
+                    identifier: pxl-auth
+                outputs:
+                  - pluginMap:
+                      accessToken:
+                        type: com.airlock.iam.flow.shared.application.configuration.script.ScriptExpectedOutputTypeConfig
+                        id: 295aa20d-08ff-4af5-ab37-71518a783110
+                        displayName: PXLident script result string required
+                        properties:
+                          outputValueType: STRING
+                          required: null
+                script: "-- Script to initiate PXL Ident workflow: authenticate\n\nlocal curl = require \"cURL\"\n \nfunction pxlIdentAuthenticate ()\n    local accessToken = \"\"\n    local json\n    local function handleResponse (response)\n        iam.log:info(\"- response: \" .. response)\n\t\tjson = iam.cjson.decode( response )\n    end\n    local targetURL = \"https://ident-api-stage.pxl-vision.com/api/v1/access/token\"\n    local request = curl.easy{\n        url = targetURL,\n        post = true,\n        httpheader = {\n            \"Content-Type: application/json\",\n            \"Authorization: Bearer \" .. iam.secrets:get(\"API_KEY\")\n        },\n        writefunction = handleResponse,\n        [curl.OPT_TIMEOUT] = 10 -- request timeout\n    }\n    request:perform()\n\tif request:getinfo(curl.INFO_RESPONSE_CODE) == 200 then\n\t\taccessToken = json[\"accessToken\"]\n\tend\n    request:close()\n    return accessToken\nend\n \nfunction iam_on_step_init ()\n    iam.log:info(\"PXL Ident: authenticate (/access/token)\")\n    local accessToken = pxlIdentAuthenticate()\n\tlocal output_map = {}\n\tif accessToken ~= \"\" then\n\t\toutput_map[\"accessToken\"] = accessToken\n\tend\n    iam.log:info(\"Output: \" .. iam.cjson.encode(output_map))\n    return output_map\nend"
+            - type: com.airlock.iam.flow.shared.application.configuration.step.ScriptableStepConfig
+              displayName: 'Scriptable: Request PXLident TC'
+              properties:
+                inputs:
+                  - pluginList:
+                      - type: com.airlock.iam.flow.shared.application.configuration.valueprovider.ScriptExecutionResultValueMapProviderConfig
+                        id: c0e166e9-e14c-4bcb-9d43-5f4712a31849
+                        displayName: Scriptable auth result
+                        properties:
+                          namespaceConfig:
+                            ref: ab35d662-c64d-4034-b46a-ef7060cafd5f
+                      - ref: df71573d-40b4-45e8-8407-53709a1c022f
+                namespace:
+                  type: com.airlock.iam.flow.shared.application.configuration.script.ScriptNamespaceConfig
+                  id: e4247b4b-9708-403f-adff-101ec3d40d0c
+                  displayName: Script Namespace pxl-trx
+                  properties:
+                    identifier: pxl-trx
+                outputs:
+                  - pluginMap:
+                      transactionCode:
+                        ref: 295aa20d-08ff-4af5-ab37-71518a783110
+                script: "-- Script to initiate PXL Ident workflow: retrieve transaction code (TC)\n\nlocal curl = require \"cURL\"\n \nfunction pxlIdentStartWorkflow()\n    local json\n\tlocal transactionCode = \"\"\n    local function handleResponse (response)\n        iam.log:info(\"- response: \" .. response)\n\t\tjson = iam.cjson.decode( response )\n    end\n    local targetURL = \"https://ident-api-stage.pxl-vision.com/api/v1/transactions\"\n\tlocal payload = {}\n\tpayload[\"accountId\"] = 421\n\tpayload[\"workflowId\"] = 9\n\tiam.log:info(\"- payload: \" .. iam.cjson.encode( payload ))\n    local request = curl.easy{\n        url = targetURL,\n        post = true,\n        httpheader = {\n            \"Content-Type: application/json\",\n            \"Authorization: Bearer \" .. iam.input_map[\"accessToken\"]\n        },\n        postfields = iam.cjson.encode( payload ),\n        writefunction = handleResponse,\n        [curl.OPT_TIMEOUT] = 10 -- request timeout\n    }\n    request:perform()\n    if request:getinfo(curl.INFO_RESPONSE_CODE) == 200 then\n        transactionCode = json[\"data\"][\"transactionCode\"]\n    end\n    request:close()\n    return transactionCode\nend\n \nfunction iam_on_step_init ()\n    iam.log:info(\"PXL Ident: authenticate (/transactions)\")\n    local transactionCode = pxlIdentStartWorkflow()\n\tlocal output_map = {}\n\tif transactionCode ~= \"\" then\n\t\toutput_map[\"transactionCode\"] = transactionCode\n\tend\n    iam.log:info(\"Output: \" .. iam.cjson.encode(output_map))\n    return output_map\nend"
+            - type: com.airlock.iam.flow.shared.application.configuration.step.ScriptableStepConfig
+              displayName: 'Scriptable: QRCode PXLident link'
+              properties:
+                inputs:
+                  - pluginList:
+                      - type: com.airlock.iam.flow.shared.application.configuration.valueprovider.ScriptExecutionResultValueMapProviderConfig
+                        id: ad3998dc-c995-4fa4-a63b-298fe4e3184f
+                        displayName: Scriptable create transaction result
+                        properties:
+                          namespaceConfig:
+                            ref: e4247b4b-9708-403f-adff-101ec3d40d0c
+                namespace:
+                  type: com.airlock.iam.flow.shared.application.configuration.script.ScriptNamespaceConfig
+                  id: c4fa5b7e-a6ca-44f9-9d84-107c46cb814e
+                  displayName: Script Namespace qrcode
+                  properties:
+                    identifier: qrcode
+                outputs:
+                  - pluginMap:
+                      qr:
+                        ref: 295aa20d-08ff-4af5-ab37-71518a783110
+                script: "-- Script to create QR code from URL\n\nlocal curl = require \"cURL\"\nlocal base64 = require \"base64\"\n\nfunction getQRCode ()\n\tlocal data_uri = \"\"\n    local function handleResponse (response)\n\t\t-- response is binary data\n\t\t-- convert to: data:image/png;base64,...\n\t\tdata_uri = \"data:image/png;base64,\" .. base64.encode( response )\n    end\n    local targetURL = \"https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fident-stage-demo-light.pxl-vision.com%3Ftc%3D\" .. iam.input_map[\"transactionCode\"]\n    local request = curl.easy{\n        url = targetURL,\n        post = false,\n        writefunction = handleResponse,\n        [curl.OPT_TIMEOUT] = 10 -- request timeout\n    }\n    request:perform()\n    if request:getinfo(curl.INFO_RESPONSE_CODE) ~= 200 then\n\t\tdata_uri = \"\"\n    end\n    request:close()\n    return data_uri\nend\n \nfunction iam_on_step_init ()\n    iam.log:info(\"PXL Ident: get result (/transactions/<tc>/data)\")\n    local output_map = {}\n    output_map[\"qr\"] = getQRCode()\n    iam.log:info(\"Data URI: \" .. iam.cjson.encode(output_map))\n    return output_map\nend"
+            - type: com.airlock.iam.flow.shared.application.configuration.acknowledgemessage.AcknowledgeMessageStepConfig
+              displayName: 'Message: Link to PXL Ident workflow'
+              properties:
+                serverMessage:
+                  type: com.airlock.iam.flow.shared.application.configuration.valueprovider.TemplateStringValueProviderConfig
+                  displayName: PXLident Launch URL
+                  properties:
+                    template:
+                      '<p>If you are on a smartphone, please select this link: <a href="https://ident-stage-demo-light.pxl-vision.com?tc=${transactionCode}">Automated ID Verification</a>.</p>
+
+                      <p>Otherwise, if <b>not</b> on a smartphone, use one to scan this QR code:</p>
+
+                      <img alt="" src="${qr}" style="width:400pt;height:400pt" />'
+                    valueMapProviders:
+                      - pluginList:
+                          - ref: df71573d-40b4-45e8-8407-53709a1c022f
+                          - type: com.airlock.iam.flow.shared.application.configuration.valueprovider.ScriptExecutionResultValueMapProviderConfig
+                            id: 7841c3f2-62e8-48a7-b8ea-62b1cc27e3ea
+                            displayName: Scriptable qrcode result
+                            properties:
+                              namespaceConfig:
+                                ref: c4fa5b7e-a6ca-44f9-9d84-107c46cb814e
+                    valueProviders:
+                      - pluginList:
+                          - ref: ad3998dc-c995-4fa4-a63b-298fe4e3184f
+                          - ref: 7841c3f2-62e8-48a7-b8ea-62b1cc27e3ea
+                stepId:
+                  type: com.airlock.iam.flow.api.application.configuration.step.StepIdConfig
+                  displayName: Step ID PXLident launch page
+                  properties:
+                    id: pxl-launch
+            - type: com.airlock.iam.flow.shared.application.configuration.step.ScriptableStepConfig
+              displayName: 'Scriptable: Retrieve PXLident result'
+              properties:
+                inputs:
+                  - pluginList:
+                      - ref: ad3998dc-c995-4fa4-a63b-298fe4e3184f
+                      - ref: c0e166e9-e14c-4bcb-9d43-5f4712a31849
+                namespace:
+                  type: com.airlock.iam.flow.shared.application.configuration.script.ScriptNamespaceConfig
+                  id: 3b7d3e18-b3c8-4cff-a4f1-25a795f0ef13
+                  displayName: Script Namespace pxl-data
+                  properties:
+                    identifier: pxl-data
+                outputs:
+                  - pluginMap:
+                      authority:
+                        type: com.airlock.iam.flow.shared.application.configuration.script.ScriptExpectedOutputTypeConfig
+                        id: cbed7d09-d7aa-4d94-909b-f04ee4008a39
+                        displayName: PXLident script result string optional
+                        properties:
+                          outputValueType: STRING
+                          required: 'false'
+                      dateOfBirth:
+                        type: com.airlock.iam.flow.shared.application.configuration.script.ScriptExpectedOutputTypeConfig
+                        displayName: PXLident script result date required
+                        properties:
+                          outputValueType: DATE
+                          required: 'true'
+                      dateOfIssue:
+                        type: com.airlock.iam.flow.shared.application.configuration.script.ScriptExpectedOutputTypeConfig
+                        id: 55c2461c-12b4-4ea6-a532-cd75dce654cd
+                        displayName: PXLident script result date optional
+                        properties:
+                          outputValueType: DATE
+                          required: 'false'
+                      documentCountry:
+                        ref: cbed7d09-d7aa-4d94-909b-f04ee4008a39
+                      documentNumber:
+                        ref: 295aa20d-08ff-4af5-ab37-71518a783110
+                      documentType:
+                        ref: cbed7d09-d7aa-4d94-909b-f04ee4008a39
+                      expirationDate:
+                        ref: 55c2461c-12b4-4ea6-a532-cd75dce654cd
+                      firstName:
+                        ref: 295aa20d-08ff-4af5-ab37-71518a783110
+                      gender:
+                        ref: cbed7d09-d7aa-4d94-909b-f04ee4008a39
+                      lastName:
+                        ref: 295aa20d-08ff-4af5-ab37-71518a783110
+                      nationality:
+                        ref: cbed7d09-d7aa-4d94-909b-f04ee4008a39
+                      placeOfBirth:
+                        ref: cbed7d09-d7aa-4d94-909b-f04ee4008a39
+                script: "-- Script to retrieve PXL Ident workflow result\n\nlocal curl = require \"cURL\"\n \nfunction pxlIdentGetData ()\n\tlocal output_map = {}\n\tlocal response = \"\"\n\tlocal function collectResponse (chunk)\n\t\tresponse = response .. chunk\n\tend\n\tlocal targetURL = \"https://ident-api-stage.pxl-vision.com/api/v1/transactions/\" .. iam.input_map[\"transactionCode\"] .. \"/data?unencryptedData=true\"\n\tiam.log:info(\"- url: \" .. targetURL)\n\tlocal request = curl.easy{\n\t\turl = targetURL,\n\t\tpost = false,\n\t\thttpheader = {\n\t\t\t\"Content-Type: application/json\",\n\t\t\t\"Authorization: Bearer \" .. iam.input_map[\"accessToken\"]\n\t\t},\n\t\twritefunction = collectResponse,\n\t\t[curl.OPT_TIMEOUT] = 10 -- request timeout\n\t}\n\tiam.log:info(\"- state: sending request\")\n\trequest:perform()\n\tiam.log:info(\"- response: \" .. response)\n\tif request:getinfo(curl.INFO_RESPONSE_CODE) == 200 then\n\t\tlocal json = iam.cjson.decode( response )\n\t\tiam.log:info(\"- 1: \" .. iam.cjson.encode( json[\"result\"] ))\n\t\tiam.log:info(\"- 2: \" .. iam.cjson.encode( json[\"result\"][\"documentVerification\"] ))\n\t\tiam.log:info(\"- 3: \" .. iam.cjson.encode( json[\"result\"][\"documentVerification\"][\"documents\"] ))\n\t\tiam.log:info(\"- 4: \" .. iam.cjson.encode( json[\"result\"][\"documentVerification\"][\"documents\"][1] ))\n\t\tiam.log:info(\"- 5: \" .. iam.cjson.encode( json[\"result\"][\"documentVerification\"][\"documents\"][1][\"viz\"] ))\n\t\tlocal person_data = json[\"result\"][\"documentVerification\"][\"documents\"][1][\"viz\"]\n\t\tfor idx, key in ipairs( {\"firstName\", \"lastName\", \"dateOfBirth\", \"documentNumber\"} ) do\n\t\t\tiam.log:info(\"- data: extracting \" .. key)\n\t\t\toutput_map[key] = person_data[key]\n\t\tend\n\tend\n\trequest:close()\n\treturn output_map\nend\n \nfunction iam_on_step_init ()\n\tiam.log:info(\"PXL Ident: get result (/transactions/<tc>/data)\")\n\tlocal output_map = pxlIdentGetData()\n\tiam.log:info(\"Transaction result: \" .. iam.cjson.encode(output_map))\n\treturn output_map\nend"
+                stepId:
+                  type: com.airlock.iam.flow.api.application.configuration.step.StepIdConfig
+                  displayName: Step ID PXLident get data
+                  properties:
+                    id: pxl-get-data
+            - type: com.airlock.iam.flow.shared.application.configuration.step.user.data.NonInteractiveSetContextDataStepConfig
+              displayName: Set user context data from PXL Ident result
+              properties:
+                userDataItems:
+                  - pluginList:
+                      - type: com.airlock.iam.userselfreg.application.configuration.definition.StringNonInteractiveUserDataItemDefinitionConfig
+                        displayName: String context 'givenName'
+                        comment: Connect to givenname
+                        properties:
+                          contextDataItemNameConfig: null
+                          valueProviderConfig:
+                            type: com.airlock.iam.flow.shared.application.configuration.valueprovider.StringFromMapValueProviderConfig
+                            displayName: String from Script Result Map 'firstName'
+                            properties:
+                              key: firstName
+                              valueMaps:
+                                - pluginList:
+                                    - type: com.airlock.iam.flow.shared.application.configuration.valueprovider.ScriptExecutionResultValueMapProviderConfig
+                                      id: b66846b3-b95c-49f5-8b61-6f139d3194d8
+                                      displayName: Scriptable data result
+                                      properties:
+                                        namespaceConfig:
+                                          ref: 3b7d3e18-b3c8-4cff-a4f1-25a795f0ef13
+                      - type: com.airlock.iam.userselfreg.application.configuration.definition.StringNonInteractiveUserDataItemDefinitionConfig
+                        displayName: String context 'lastname'
+                        comment: Connect to surname
+                        properties:
+                          contextDataItemNameConfig: null
+                          valueProviderConfig:
+                            type: com.airlock.iam.flow.shared.application.configuration.valueprovider.StringFromMapValueProviderConfig
+                            displayName: String from Script Result Map 'lastName'
+                            properties:
+                              key: lastName
+                              valueMaps:
+                                - pluginList:
+                                    - ref: b66846b3-b95c-49f5-8b61-6f139d3194d8
+                      - type: com.airlock.iam.userselfreg.application.configuration.definition.StringNonInteractiveUserDataItemDefinitionConfig
+                        displayName: String context 'documentNumber'
+                        comment: Connect to company
+                        properties:
+                          contextDataItemNameConfig: null
+                          valueProviderConfig:
+                            type: com.airlock.iam.flow.shared.application.configuration.valueprovider.StringFromMapValueProviderConfig
+                            displayName: String from Script Result Map 'documentNumber'
+                            properties:
+                              key: documentNumber
+                              valueMaps:
+                                - pluginList:
+                                    - ref: b66846b3-b95c-49f5-8b61-6f139d3194d8
+            - type: com.airlock.iam.userselfreg.application.configuration.step.SelfRegistrationUserUnlockStepConfig
+              displayName: PXLident unlock user after registration
+            - type: com.airlock.iam.userselfreg.application.configuration.step.UserPersistingStepConfig
+              displayName: PXLident persist user
+              properties:
+                persistencyStrategy: null
+                preCondition:
+                  type: com.airlock.iam.flow.application.configuration.selection.condition.TagConditionConfig
+                  displayName: PXLident has email verified tag
+                  properties:
+                    tag:
+                      ref: a6930c6e-a3e2-4131-8da2-57ca7e7b1acf
+            - type: com.airlock.iam.flow.shared.application.configuration.acknowledgemessage.AcknowledgeMessageStepConfig
+              displayName: Show identity data
+              properties:
+                serverMessage:
+                  type: com.airlock.iam.flow.shared.application.configuration.valueprovider.TemplateStringValueProviderConfig
+                  displayName: Show PXL data
+                  properties:
+                    template: "<h3>Welcome !</h3>\n<p>You have successfully registered and we have created your account.</p>\n<p>The following information has been extracted from your identity document:</p>\n<table border=\"0\">\n<thead bgcolor=\"#1f7099\"><td><font color=\"#ffffff\"><b>Item</b></font></td><td>><font color=\"#ffffff\"><b>Value</b></font></td></thead>\n        <tr bgcolor=\"#93cce9\"><td>Firstname</td><td>${givenname}</td></tr>\n        <tr bgcolor=\"#c9e5f4\"><td>Lastname</td><td>${surname}</td></tr>\n        <tr bgcolor=\"#93cce9\"><td># ID document</td><td>${company}</td></tr>\n</table>\n<p></p>\n<!--\n<div style=\"display: table;margin-left: 5em;\">\n<div style=\"display: table-row;background-color: #1f7099;color: white;font-weight: bold;\">\n        <div style=\"display: table-cell;min-width: 8em;text-align: right;padding: 0.4em 1em 0.4em 1em;float-left;\">Item</div>\n        <div style=\"display: table-cell;min-width: 12em;padding: 0.4em 1em 0.4em 1em;\">Value</div>\n</div>\n<div style=\"display: table-row;background-color: #93cce9;float: clear;\">\n        <div style=\"display: table-cell;text-align: right;padding: 0.3em 1em 0.3em 1em;color: #1f7099;\">Firstname</div>\n        <div style=\"display: table-cell;padding: 0.3em 1em 0.3em 1em;font-weight: bold;color: red;\">${givenname}</div>\n</div>\n<div style=\"display: table-row;background-color: #c9e5f4;\">\n        <div style=\"display: table-cell;text-align: right;padding: 0.3em 1em 0.3em 1em;color: #1f7099;\">Lastname</div>\n        <div style=\"display: table-cell;padding: 0.3em 1em 0.3em 1em;font-weight: bold;color: red;\">${surname}</div>\n</div>\n<div style=\"display: table-row;background-color: #93cce9;\">\n        <div style=\"display: table-cell;text-align: right;padding: 0.3em 1em 0.3em 1em;color: #1f7099;\"># ID document</div>\n        <div style=\"display: table-cell;padding: 0.3em 1em 0.3em 1em;font-weight: bold;color: red;\">${company}</div>\n</div>\n</div>\n-->\n<p>No go forth and continue with the demo.</p>\n<div class=\"iam-log\"></div>"
+                    valueEncoders:
+                      - pluginList:
+                          - type: com.airlock.iam.common.application.configuration.encoder.HtmlStringEscaperConfig
+                    valueMapProviders:
+                      - pluginList:
+                          - ref: df71573d-40b4-45e8-8407-53709a1c022f
+  - type: com.airlock.iam.userselfreg.application.configuration.ui.UserSelfRegUiConfig
+    id: a5da2fcd-9791-4b43-90c0-dcf0b0c3e365
+    displayName: User Self-Reg UI PXLident
+    properties:
+      cancellationTarget:
+        type: com.airlock.iam.authentication.application.configuration.ui.AuthFlowRedirectTargetConfig
+        id: f3a14385-2d42-4529-8f2b-bd2049de52a2
+        displayName: Redirect to Portal/Login Page
+      completionTarget:
+        ref: f3a14385-2d42-4529-8f2b-bd2049de52a2
+      flowId:
+        ref: 6130ec86-3895-48a0-9771-9d036a987fef
+      showConfirmationPage: 'false'
